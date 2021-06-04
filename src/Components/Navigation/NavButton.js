@@ -3,7 +3,7 @@ import "./styles.css";
 const NavButton = ({ text }) => {
   return (
     <div className="NavButtonWrapper">
-      <button className="NavButton">{text}</button>
+      <button className="Button">{text}</button>
     </div>
   );
 };

@@ -22,6 +22,8 @@
 
 .App {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   background-size: 60px 60px;
   background-image: radial-gradient(
@@ -36,11 +38,22 @@
   flex-direction: row;
   align-items: center;
   width: 100%;
-  padding: 0.01rem 0.5rem 0.01rem 0.5rem;
+  padding: 0rem 0.5rem 0.01rem 0.5rem;
   background-color: var(--primary_dark);
+}
+.Content {
+  flex-grow: 1;
+  display: grid;
+  place-content: center;
+  padding: 0rem 0.5rem 0rem 0.5rem;
+}
+.Footer {
+  text-align: right;
+  padding: 0.01rem 0.5rem 0.5rem 0.5rem;
+  color: var(--primary_light);
 }
 
 .Title {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: var(--primary_light);
 }
