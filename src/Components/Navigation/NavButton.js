@@ -1,9 +1,11 @@
 import React from "react";
 import "./styles.css";
-const NavButton = ({ text }) => {
+const NavButton = ({ text, handleClick }) => {
   return (
     <div className="NavButtonWrapper">
-      <button className="Button">{text}</button>
+      <button onClick={handleClick} className="Button">
+        {text}
+      </button>
     </div>
   );
 };

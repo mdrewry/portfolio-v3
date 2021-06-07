@@ -1,0 +1,83 @@
+.CardWrapper {
+  position: relative;
+  --padding: 0.75rem;
+}
+.CardShadow {
+  position: absolute;
+  position: absolute;
+  box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.6);
+  border-radius: 5px;
+  top: var(--padding);
+  left: calc(-1 * var(--padding));
+  bottom: calc(-1 * var(--padding));
+  right: 0;
+  transition: transform 200ms ease;
+}
+.CardWrapper:hover .CardShadow {
+  transform: scale(1.05) translateX(calc(-1 * var(--padding)))
+    translateY(var(--padding));
+}
+
+.Card {
+  background: url("../../res/background2.jpg");
+  width: 30rem;
+  height: 20rem;
+  padding: var(--padding) var(--padding) var(--padding) var(--padding);
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  position: relative;
+  z-index: 1;
+  background: inherit;
+  overflow: hidden;
+  transition: transform 200ms ease;
+}
+@media only screen and (max-width: 900px) {
+  .Card {
+    background: url("../../res/background2.jpg");
+    width: 70vw;
+    padding: var(--padding) var(--padding) var(--padding) var(--padding);
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    background: inherit;
+    overflow: hidden;
+    transition: transform 200ms ease;
+  }
+}
+.Card::before {
+  content: "";
+  position: absolute;
+  background: inherit;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.6);
+  filter: blur(10px);
+  margin: -20px;
+}
+.CardHeader {
+  display: inline-block;
+  position: relative;
+  transition: transform 200ms ease;
+}
+.CardHeader::after {
+  content: "";
+  background: var(--primary_highlight);
+  width: calc(100% + var(--padding));
+  height: 5px;
+  position: absolute;
+  bottom: -0.25rem;
+  left: calc(-1 * var(--padding));
+  transform: scale(0);
+  transform-origin: left;
+  transition: transform 200ms ease;
+}
+.Card:hover {
+  transform: scale(1.01);
+}
+.Card:hover .CardHeader::after {
+  transform: scale(1);
+}

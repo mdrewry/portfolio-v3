@@ -38,7 +38,7 @@
   flex-direction: row;
   align-items: center;
   width: 100%;
-  padding: 0rem 0.5rem 0.01rem 0.5rem;
+  padding: 0rem 0.75rem 0.01rem 0.75rem;
   background-color: var(--primary_dark);
 }
 .Content {
@@ -48,11 +48,18 @@
   padding: 0rem 0.5rem 0rem 0.5rem;
 }
 .Footer {
-  text-align: right;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   padding: 0.01rem 0.5rem 0.5rem 0.5rem;
   color: var(--primary_light);
 }
-
+.TitleWrapper {
+  position: relative;
+  flex-grow: 1;
+  height: 3rem;
+}
 .Title {
   font-size: 1.5rem;
   color: var(--primary_light);

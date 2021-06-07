@@ -1,6 +1,6 @@
 import "./styles.css";
 import React, { useState } from "react";
-import { useChain, useTrail, a, animated } from "react-spring";
+import { useTrail, a } from "@react-spring/web";
 import { MenuOutlined } from "@ant-design/icons";
 import NavButton from "./NavButton";
 const Menu = ({ open, children }) => {
@@ -25,16 +25,19 @@ const MobileNav = () => {
   const handleOpen = () => {
     setOpenMenu((curr) => !curr);
   };
+  const handleClick = () => {
+    setOpenMenu((curr) => !curr);
+  };
   return (
     <div className="MenuWrapper">
       <button className="MenuButton" onClick={handleOpen}>
         <MenuOutlined />
       </button>
       <Menu open={openMenu}>
-        <NavButton text="Experience" />
-        <NavButton text="Projects" />
-        <NavButton text="Contact" />
-        <NavButton text="About" />
+        <NavButton handleClick={handleClick} text="Experience" />
+        <NavButton handleClick={handleClick} text="Projects" />
+        <NavButton handleClick={handleClick} text="Contact" />
+        <NavButton handleClick={handleClick} text="About" />
       </Menu>
     </div>
   );

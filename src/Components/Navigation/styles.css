@@ -15,8 +15,6 @@
     var(--primary_dark),
     var(--primary_highlight)
   );
-  /* background: linear-gradient(red 10%, blue 90%); */
-  /* background: red; */
   width: 100%;
   height: 5px;
   border-radius: 0.1rem;
@@ -39,7 +37,7 @@
   padding: 0em 0em 0em 0em;
 }
 .MenuButton {
-  padding: 0.25em 0.5em 0.25em 0.5em;
+  padding: 0em;
   color: var(--primary_light);
   background-color: rgba(var(--primary_dark_rgb), 100);
   outline: none;
