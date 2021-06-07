@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useTransition, a, config } from "@react-spring/web";
+import { useTransition, a } from "@react-spring/web";
 const NavigationHeader = () => {
   const [currPos, setCurrPos] = useState(0);
   const [toggle, setToggle] = useState(false);

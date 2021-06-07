@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import "./styles.css";
-import { MinusCircleOutlined, InfoCircleOutlined } from "@ant-design/icons";
+import { InfoCircleOutlined } from "@ant-design/icons";
 const FooterInfo = () => {
   return (
     <div className="FooterInfo">
