@@ -16,7 +16,18 @@ function App() {
         <TopNavigation />
       </Header>
       <Content className="Content">
-        <AboutMe />
+        <section className="PageSection">
+          <AboutMe />
+        </section>
+        <section className="PageSection">
+          <AboutMe />
+        </section>
+        <section className="PageSection">
+          <AboutMe />
+        </section>
+        <section className="PageSection">
+          <AboutMe />
+        </section>
       </Content>
       <Footer className="Footer">
         <div className="Grow" />
