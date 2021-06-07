@@ -4,7 +4,7 @@ import { Layout } from "antd";
 import { useMediaQuery } from "react-responsive";
 import TopNavigation from "./Components/Navigation/TopNavigation";
 import NavigationHeader from "./Components/Navigation/NavigationHeader";
-import AboutMe from "./Components/Card/AboutMe";
+import AboutMe from "./Components/Card/AboutMe/AboutMe";
 import FooterInfo from "./Components/Footer/FooterInfo";
 const { Header, Footer, Content } = Layout;
 function App() {

@@ -17,6 +17,7 @@
   font-size: 0.5rem;
   color: var(--primary_light);
   background-color: var(--primary_dark);
+  padding: 0rem 0rem var(--padding) var(--padding);
   border-left: var(--padding) solid var(--primary_highlight);
   border-bottom: var(--padding) solid var(--primary_highlight);
 }
