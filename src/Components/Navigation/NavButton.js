@@ -3,7 +3,10 @@ import "./styles.css";
 const NavButton = ({ text, handleClick }) => {
   return (
     <div className="NavButtonWrapper">
-      <button onClick={handleClick} className="Button">
+      <button
+        onClick={() => handleClick(text.toLowerCase())}
+        className="Button"
+      >
         {text}
       </button>
     </div>

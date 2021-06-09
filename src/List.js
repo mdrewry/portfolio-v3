@@ -1,15 +1,15 @@
-import SimpleIntervalIcon from "./Res/SimpleIntervalIcon.png";
-import CrowdFlowIcon from "./Res/CrowdFlowIcon.jpg";
-import PortfolioV1Icon from "./Res/ResumeV1Icon.PNG";
-import PortfolioV2Icon from "./Res/ResumeV2Icon.PNG";
-import HeavenlyAstrologyIcon from "./Res/HeavenlyAstrologyIcon.ico";
-import AndroidStudioIcon from "./Res/AndroidStudioLogo2.png";
-import ReactIcon from "./Res/ReactIcon.png";
-import ReactNativeIcon from "./Res/ReactNativeIcon.png";
-import GoogleCloudIcon from "./Res/googleCloudIcon.png";
-import JavaIcon from "./Res/JavaLogo.png";
-import snapChefIcon from "./Res/SnapChefIcon.png";
-
+import SimpleIntervalIcon from "./res/CardImages/SimpleIntervalIcon.png";
+import CrowdFlowIcon from "./res/CardImages/CrowdFlowIcon.jpg";
+import PortfolioV1Icon from "./res/CardImages/ResumeV1Icon.PNG";
+import PortfolioV2Icon from "./res/CardImages/ResumeV2Icon.PNG";
+import HeavenlyAstrologyIcon from "./res/CardImages/HeavenlyAstrologyIcon.ico";
+import snapChefIcon from "./res/CardImages/SnapChefIcon.png";
+import JPMorganIcon from "./res/CardImages/JPMorganIcon.png";
+import AndroidStudioIcon from "./res/TechStackImages/AndroidStudioLogo2.png";
+import ReactIcon from "./res/TechStackImages/ReactIcon.png";
+import ReactNativeIcon from "./res/TechStackImages/ReactNativeIcon.png";
+import GoogleCloudIcon from "./res/TechStackImages/googleCloudIcon.png";
+import JavaIcon from "./res/TechStackImages/JavaLogo.png";
 export const projects = [
   {
     title: "Portfolio V1",
@@ -102,6 +102,13 @@ export const projects = [
 ];
 
 export const experience = [
+  {
+    title: "JPMorgan Chase & Co.",
+    description:
+      "This summer I will be working as a SWE Intern for JPMorgan Chase & Co.",
+    links: [],
+    projectIcon: JPMorganIcon,
+  },
   {
     title: "GameSetMatch",
     description:

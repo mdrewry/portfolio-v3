@@ -2,6 +2,7 @@ import "./styles.css";
 import React, { useState } from "react";
 import { useTrail, a } from "@react-spring/web";
 import { MenuOutlined } from "@ant-design/icons";
+import { scroller } from "react-scroll";
 import NavButton from "./NavButton";
 const Menu = ({ open, children }) => {
   const items = React.Children.toArray(children);
@@ -25,8 +26,13 @@ const MobileNav = () => {
   const handleOpen = () => {
     setOpenMenu((curr) => !curr);
   };
-  const handleClick = () => {
+  const handleClick = (location) => {
     setOpenMenu((curr) => !curr);
+    scroller.scrollTo(location, {
+      duration: 800,
+      delay: 0,
+      smooth: "easeInOutQuart",
+    });
   };
   return (
     <div className="MenuWrapper">
