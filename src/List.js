@@ -108,6 +108,10 @@ export const experience = [
       "This summer I will be working as a SWE Intern for JPMorgan Chase & Co.",
     links: [],
     projectIcon: JPMorganIcon,
+    date: {
+      start: "June 2021",
+      end: "Aug 2021",
+    },
   },
   {
     title: "GameSetMatch",
@@ -120,6 +124,10 @@ export const experience = [
       },
     ],
     projectIcon: SimpleIntervalIcon,
+    date: {
+      start: "June 2020",
+      end: "May 2021",
+    },
   },
   {
     title: "Heavenly Writing",
@@ -127,5 +135,9 @@ export const experience = [
       "As part of my Software Engineering class, CEN3031 at UF, the University partnered with local businesses in order to provide experience working on a full stack webapp. This app was created using the MERN stack, and I developed the React frontend with a team of 2 others. ",
     projectIcon: HeavenlyAstrologyIcon,
     links: [{ label: "Github", link: "https://github.com/6XAM/MVP" }],
+    date: {
+      start: "Jan 2020",
+      end: "May 2020",
+    },
   },
 ];

@@ -1,10 +1,18 @@
 import React from "react";
-import "./styles.css";
+
 const Experience = ({ item }) => {
   return (
-    <div>
-      <h5>{item.title}</h5>
-      <h6>{item.description}</h6>
+    <div className="ExperienceCard">
+      <div className="RowCenter">
+        <h5 className="Title">{item.title}</h5>
+        <div className="Grow" />
+        <h5 className="SubTitle ExperienceDate">
+          {item.date.start}
+          <br />
+          {item.date.end}
+        </h5>
+      </div>
+      <h6 className="ExperienceDescription">{item.description}</h6>
     </div>
   );
 };
