@@ -78,25 +78,43 @@ a:active {
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 0rem 4rem 0rem 4rem;
+  padding: 0rem 25rem 0rem 25rem;
 }
-
+.AppContent-divider {
+  color: var(--primary_highlight);
+  border-bottom: 1px solid var(--primary_highlight);
+}
+@media only screen and (max-width: 2000px) {
+  .Content {
+    padding: 0rem 15rem 0rem 15rem;
+  }
+}
+@media only screen and (max-width: 1500px) {
+  .Content {
+    padding: 0rem 10rem 0rem 10rem;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .Content {
+    padding: 0rem 6rem 0rem 6rem;
+  }
+}
 @media only screen and (max-width: 900px) {
   .Content {
-    flex-grow: 1;
-    position: relative;
-    top: -2.5rem;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 0rem 2rem 0rem 2rem;
+    padding: 0rem 0.75rem 0rem 0.75rem;
   }
 }
 
 .PageSection {
   display: grid;
   place-content: center;
-  height: 100vh;
+  min-height: 100vh;
+}
+.PageListSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
 }
 .Footer {
   position: sticky;
@@ -146,17 +164,16 @@ a:active {
 
 .Card {
   width: 30rem;
-  height: 20rem;
+  min-height: 20rem;
   padding: var(--padding) var(--padding) var(--padding) var(--padding);
-  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   position: relative;
   z-index: 1;
-  background: inherit;
   overflow: hidden;
   transition: transform 200ms ease;
   display: flex;
   flex-direction: column;
+  background: rgba(var(--primary_light_rgb), 0.8);
 }
 @media only screen and (max-width: 900px) {
   .Card {
@@ -166,19 +183,7 @@ a:active {
 .Card:hover {
   transform: scale(1.01);
 }
-.Card::before {
-  content: "";
-  position: absolute;
-  background: inherit;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.6);
-  filter: blur(10px);
-  margin: -20px;
-}
+
 .CardHeader {
   display: inline-block;
   position: relative;
@@ -208,18 +213,18 @@ a:active {
 
 /* About Me link button */
 
-.LinkWrapper {
+.AboutMeLinkWrapper {
   display: grid;
   place-content: center;
   flex-grow: 1;
 }
-.LinkIconWrapper {
+.AboutMeLinkIconWrapper {
   padding: 0rem var(--padding) 0rem var(--padding);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.LinkIconButton {
+.AboutMeLinkIconButton {
   display: grid;
   place-content: center;
   border-radius: 50%;
@@ -231,25 +236,25 @@ a:active {
   background-color: var(--primary_highlight);
   transition: transform 200ms ease, border 200ms ease;
 }
-.LinkIconButton:hover {
+.AboutMeLinkIconButton:hover {
   transform: scale(1.2);
   border: 2px solid var(--primary_highlight);
 }
-.LinkIconButton:active {
+.AboutMeLinkIconButton:active {
   transform: scale(1.1);
   border: 2px solid transparent;
 }
-.LinkIcon {
+.AboutMeLinkIcon {
   font-size: 1.5rem;
 }
-.LinkIconTooltip {
+.AboutMeLinkIconTooltip {
   position: relative;
   top: -2.5rem;
   font-size: 0.8rem;
   opacity: 0;
   transition: transform 100ms ease, ease-in 200ms;
 }
-.LinkIconWrapper:hover .LinkIconTooltip {
+.AboutMeLinkIconWrapper:hover .AboutMeLinkIconTooltip {
   opacity: 1;
   transform: translateY(2rem);
 }
@@ -258,6 +263,9 @@ a:active {
 
 .ExperienceDescription {
   color: var(--primary_light);
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  font-weight: 400;
 }
 .ExperienceDate {
   text-align: right;
@@ -267,6 +275,7 @@ a:active {
   position: relative;
   transition: transform 200ms ease;
   display: inline-block;
+  width: 100%;
 }
 .ExperienceCard::before {
   content: "";
@@ -283,4 +292,100 @@ a:active {
 
 .ExperienceCard:hover.ExperienceCard::before {
   transform: scale(1);
+}
+
+/* Experience Link Icons */
+
+.ExperienceLinkWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.ExperienceLinkIconButton {
+  display: grid;
+  place-content: center;
+  border-radius: 50%;
+  padding: 2px;
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid transparent;
+  background-clip: content-box;
+  background-color: var(--primary_highlight);
+  transition: transform 200ms ease, border 200ms ease;
+}
+.ExperienceLinkIconButton:hover {
+  transform: scale(1.2);
+  border: 2px solid var(--primary_highlight);
+}
+.ExperienceLinkIconButton:active {
+  transform: scale(1.1);
+  border: 2px solid transparent;
+}
+
+.ExperienceLinkIconWrapper {
+  padding: 0rem 0rem 0rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.ExperienceLinkIcon {
+  font-size: 1rem;
+}
+.ExperienceLinkIconTooltip {
+  position: absolute;
+  top: 0rem;
+  font-size: 0.8rem;
+  opacity: 0;
+  transition: transform 100ms ease, ease-in 200ms;
+  color: var(--primary_light);
+  white-space: nowrap;
+}
+.ExperienceLinkIconWrapper:hover .ExperienceLinkIconTooltip {
+  opacity: 1;
+  transform: translateY(1.5rem);
+}
+
+.DevPostIcon {
+  transform: scale(1.4);
+}
+
+/* Contact Me */
+
+.ContactMeField {
+  margin-bottom: 1rem;
+}
+.ContactMeButton {
+  align-self: center;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+  background: rgba(0, 0, 0, 0);
+  color: var(--primary_dark);
+  transition: transform 200ms ease, border 200ms ease, color 200ms ease;
+  font-size: 1rem;
+}
+.ContactMeButton:hover {
+  transform: scale(1.2);
+
+  border: 2px solid var(--primary_highlight);
+}
+.ContactMeButton:hover .ContactMeIcon {
+  color: var(--primary_highlight);
+}
+.ContactMeButton:active {
+  transform: scale(1.1);
+  border: 2px solid transparent;
+}
+.ContactMeIcon {
+  margin-left: 5px;
+  font-size: 1rem;
+}
+.ContactMe-field {
+  border: none;
+  width: 100%;
 }

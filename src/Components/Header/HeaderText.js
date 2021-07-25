@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import { useTransition, a } from "@react-spring/web";
-const NavigationHeader = () => {
+const HeaderText = () => {
   const [currPos, setCurrPos] = useState(0);
   const [toggle, setToggle] = useState(false);
-  const titles = ["Mark Drewry", "Developer", "Student"];
+  const titles = ["React", "Javascript", "Java", "Python", "Git"];
   const transitions = useTransition(currPos, {
     from: { opacity: 0 },
     enter: { opacity: 1 },
     leave: { opacity: 0 },
     reverse: toggle,
-    delay: 200,
+    delay: 300,
     config: { duration: 5000 },
     onRest: () => {
       setToggle(!toggle);
@@ -41,4 +41,4 @@ const NavigationHeader = () => {
     </div>
   );
 };
-export default NavigationHeader;
+export default HeaderText;

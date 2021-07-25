@@ -20,10 +20,10 @@ const AboutMe = () => {
             I'm a Junior Software Engineer. I enjoy working with React and other
             software.
           </p>
-          <div className="LinkWrapper">
+          <div className="AboutMeLinkWrapper">
             <div className="RowCenter">
-              {links.map((link) => (
-                <LinkIcon link={link} />
+              {links.map((link, index) => (
+                <LinkIcon key={index} link={link} />
               ))}
             </div>
           </div>

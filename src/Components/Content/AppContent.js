@@ -1,10 +1,10 @@
 import React from "react";
-import { Layout } from "antd";
 import { Element } from "react-scroll";
-import AboutMe from "../Card/AboutMe/AboutMe";
-import Experience from "../Card/Experience/Experience";
-import Project from "../Card/Project/Project";
-import ContactMe from "../Card/ContactMe/ContactMe";
+import { Divider } from "antd";
+import AboutMe from "../AboutMe/AboutMe";
+import Experience from "../Experience/Experience";
+import ContactMe from "../ContactMe/ContactMe";
+import { Layout } from "antd";
 import { experience, projects } from "../../List";
 const { Content } = Layout;
 const AppContent = () => {
@@ -14,16 +14,18 @@ const AppContent = () => {
       <section className="PageSection">
         <AboutMe />
       </section>
+      <Divider className="AppContent-divider">Experience</Divider>
       <Element name="experience" />
-      <section className="PageSection">
-        {experience.map((item) => (
-          <Experience item={item} />
+      <section className="PageListSection">
+        {experience.map((item, index) => (
+          <Experience key={index} item={item} />
         ))}
       </section>
+      <Divider className="AppContent-divider">Projects</Divider>
       <Element name="projects" />
-      <section className="PageSection">
-        {projects.map((item) => (
-          <Project item={item} />
+      <section className="PageListSection">
+        {projects.map((item, index) => (
+          <Experience key={index} item={item} />
         ))}
       </section>
       <Element name="contact" />

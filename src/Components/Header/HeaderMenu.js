@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useTrail, a } from "@react-spring/web";
 import { MenuOutlined } from "@ant-design/icons";
 import { scroller } from "react-scroll";
-import NavButton from "./NavButton";
+import Button from "./Button";
 const Menu = ({ open, children }) => {
   const items = React.Children.toArray(children);
   const trail = useTrail(items.length, {
@@ -21,7 +21,7 @@ const Menu = ({ open, children }) => {
     </div>
   );
 };
-const MobileNav = () => {
+const HeaderMenu = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const handleOpen = () => {
     setOpenMenu((curr) => !curr);
@@ -40,12 +40,12 @@ const MobileNav = () => {
         <MenuOutlined />
       </button>
       <Menu open={openMenu}>
-        <NavButton handleClick={handleClick} text="Experience" />
-        <NavButton handleClick={handleClick} text="Projects" />
-        <NavButton handleClick={handleClick} text="Contact" />
-        <NavButton handleClick={handleClick} text="About" />
+        <Button handleClick={handleClick} text="Experience" />
+        <Button handleClick={handleClick} text="Projects" />
+        <Button handleClick={handleClick} text="Contact" />
+        <Button handleClick={handleClick} text="About" />
       </Menu>
     </div>
   );
 };
-export default MobileNav;
+export default HeaderMenu;

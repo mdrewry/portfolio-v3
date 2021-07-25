@@ -1,26 +1,18 @@
-import React, {useState} from "react";
+import React from "react";
 import "./App.css";
-import { Layout } from "antd";
 // import { useMediaQuery } from "react-responsive";
-import TopNavigation from "./Components/Navigation/TopNavigation";
-import NavigationHeader from "./Components/Navigation/NavigationHeader";
-import FooterInfo from "./Components/Footer/FooterInfo";
-import AppContent from "./Components/AppContent/AppContent";
-const { Header, Footer } = Layout;
+import AppHeader from "./Components/Header/AppHeader";
+import AppFooter from "./Components/Footer/AppFooter";
+import AppContent from "./Components/Content/AppContent";
+
 function App() {
   // const isDesktop = useMediaQuery({ query: "(min-device-width:1224px)" });
   return (
-    <Layout className="App">
-      <Header className="Header">
-        <NavigationHeader />
-        <TopNavigation />
-      </Header>
+    <div className="App">
+      <AppHeader />
       <AppContent />
-      <Footer className="Footer">
-        <div className="Grow" />
-        <FooterInfo />
-      </Footer>
-    </Layout>
+      <AppFooter />
+    </div>
   );
 }
 
