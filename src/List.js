@@ -2,7 +2,6 @@ import SimpleIntervalIcon from "./res/CardImages/SimpleIntervalIcon.png";
 import CrowdFlowIcon from "./res/CardImages/CrowdFlowIcon.jpg";
 import PortfolioV1Icon from "./res/CardImages/ResumeV1Icon.PNG";
 import PortfolioV2Icon from "./res/CardImages/ResumeV2Icon.PNG";
-import HeavenlyAstrologyIcon from "./res/CardImages/HeavenlyAstrologyIcon.ico";
 import snapChefIcon from "./res/CardImages/SnapChefIcon.png";
 import JPMorganIcon from "./res/CardImages/JPMorganIcon.png";
 import AndroidStudioIcon from "./res/TechStackImages/AndroidStudioLogo2.png";
