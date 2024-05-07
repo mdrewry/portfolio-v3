@@ -9,6 +9,7 @@ import Icon, {
   LinkOutlined,
 } from "@ant-design/icons";
 import { ReactComponent as DevPost } from "../../res/CardImages/dev_post_icon.svg";
+import Storytok from "../../res/CardImages/storytok.webp";
 const Menu = ({ open, children }) => {
   const items = React.Children.toArray(children);
   const trail = useTrail(items.length, {
@@ -55,6 +56,14 @@ const LinkMenu = ({ openLinks, links }) => {
                 component={DevPost}
                 className="ExperienceLinkIcon DevPostIcon"
               />
+            )}
+            {link.label === "Storytok" && (
+              <Icon
+                component={() => <img width={25} height={25} src={Storytok}></img>}
+                className="ExperienceLinkIcon DevPostIcon"
+              />
+
+
             )}
           </a>
           <h4 className="ExperienceLinkIconTooltip">{link.label}</h4>

@@ -3,13 +3,48 @@ import CrowdFlowIcon from "./res/CardImages/CrowdFlowIcon.jpg";
 import PortfolioV1Icon from "./res/CardImages/ResumeV1Icon.PNG";
 import PortfolioV2Icon from "./res/CardImages/ResumeV2Icon.PNG";
 import snapChefIcon from "./res/CardImages/SnapChefIcon.png";
+import storytokIcon from "./res/CardImages/storytok.webp";
 import JPMorganIcon from "./res/CardImages/JPMorganIcon.png";
 import AndroidStudioIcon from "./res/TechStackImages/AndroidStudioLogo2.png";
 import ReactIcon from "./res/TechStackImages/ReactIcon.png";
 import ReactNativeIcon from "./res/TechStackImages/ReactNativeIcon.png";
 import GoogleCloudIcon from "./res/TechStackImages/googleCloudIcon.png";
+import NextJsIcon from "./res/TechStackImages/nextjsIcon.png";
+import AWSIcon from "./res/TechStackImages/awsIcon.png";
+import DockerIcon from "./res/TechStackImages/dockerIcon.png";
+import ChatGPTIcon from "./res/TechStackImages/chatgptIcon.svg";
 import JavaIcon from "./res/TechStackImages/JavaLogo.png";
 export const projects = [
+  {
+    title: "Storytok.ai",
+    description:
+      "Next.js application that generates viral \"stories\" style videos from a reddit link or user input. Utilized chat-gpt api for text sanitization, aws polly for tts, docker for hosting, and remotion for video rendering.",
+    links: [
+      { label: "Storytok", link: "https://storytok.ai" },
+    ],
+    projectIcon: storytokIcon,
+    techStack: [
+      {
+        path: NextJsIcon,
+        name: "Next.js",
+      },
+      {
+        path: ChatGPTIcon,
+        name: "Chat GPT",
+      },
+      {
+        path: AWSIcon,
+        name: "AWS",
+      },
+      {
+        path: DockerIcon,
+        name: "Docker",
+      },
+    ],
+    date: {
+      end: "April 2024",
+    },
+  },
   {
     title: "TrailTracker",
     description:
@@ -134,7 +169,18 @@ export const projects = [
 
 export const experience = [
   {
-    title: "JPMorgan Chase",
+    title: "JPMorgan Chase SWE",
+    description:
+      "Full time SWE for JPMorgan Chase & Co. I collaborated with a large international team on a full stack application that manages supply chain finance for the firm. The primary tech stack is comprised of Java Spring Boot and React.",
+    links: [],
+    projectIcon: JPMorganIcon,
+    date: {
+      start: "June 2022",
+      end: "Current",
+    },
+  },
+  {
+    title: "JPMorgan Chase Internship",
     description:
       "SWE Intern for JPMorgan Chase & Co. I collaborated with a team of 8 interns in order to modernize an internal application. During this internship I gained experience using Java Spring Boot, Kubernetes, React, Jest, Mockito, and JUnit.",
     links: [],
